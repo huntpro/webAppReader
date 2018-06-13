@@ -1,0 +1,38 @@
+ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 15px;
+    color: #6b3416;
+    border-bottom: 1px solid #eee;
+    height: 13vh;
+    min-height: 60px;
+    max-height: 100px;
+}
+
+ul {
+    height: 100%;
+}
+
+img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.top {
+    height: 44px;
+    background: #efeff0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center
+}
+
+.top a {
+    width: 10px;
+    height: 16px;
+    background: url(/img/back.png) no-repeat;
+    background-size: 10px 16px;
+    margin: 0 16px;
+    display: inline-block
+}

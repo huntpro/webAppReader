@@ -1,0 +1,19 @@
+<section>
+    <link rel="stylesheet" type="text/css" href="/css/hot.css">
+    <h2 style="padding: 15px 13px 14px 13px;
+    border-bottom: 1px solid #f0f0f0;">本周最火</h2>
+    <div v-for="item in hotItems" :key="item.cover" class="flex hot-container">
+        <p class="hot-cover">
+            <img :alt="item.title" :src="item.cover">
+            <span>{{item.finished}}</span>
+        </p>
+        <div class="flex-column hot-detail">
+            <a :href="item.href"><h1>{{item.title}}</h1></a>
+            <span>{{item.authors}}</span>
+            <p>{{item.summary}}</p>
+            <div class="flex hot-tag">
+                <span v-for="tag in item.tags">{{tag}}</span>
+            </div>
+        </div>
+    </div>
+</section>

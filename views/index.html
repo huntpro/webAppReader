@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <title>书城首页</title>
+    <style>
+        #app {
+            position: relative;
+        }
+
+        .container {
+            width: 200%;
+            transform: translate3d(0px, 0px, 0px);
+            transition-duration: .5s
+        }
+
+        .container >div {
+            width: 50%;
+            position: absolute;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <% include subs/head.html%>
+            <div class="container">
+                <div>
+                    <% include subs/index-top.html%>
+                        <% include subs/hot.html%>
+                </div>
+                <div>
+
+                </div>
+            </div>
+    </div>
+</body>
+<script src="/js/vue.js"></script>
+<script src="/js/zepto.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                selectedItem: 0,
+                hotItems: [],
+                container: null
+            }
+        },
+        created() {
+            $.getJSON('/hot', data => {
+                const items = data.data || []
+                items.forEach(item => {
+                    item.finished = item.finished ? '完结' : '未完结'
+                    item.href = `/book?id=${item.fiction_id}`
+                })
+                this.hotItems = items
+            })
+            this.container = document.querySelector('.container')
+        },
+        methods: {
+            tabSwitch(itemNumber) {
+                this.selectedItem = itemNumber || 0
+                document.querySelector('.container').style = itemNumber ? 'transform:translate3d(-50%,0px,0px)' :
+                    ''
+            }
+        }
+    })
+</script>
+
+</html>

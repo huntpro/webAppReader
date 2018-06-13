@@ -1,0 +1,22 @@
+.header {
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    background: #efeff0
+}
+
+.header a {
+    display: inline-block;
+}
+
+.selected {
+    color: #ff6600;
+    border-bottom: 1px solid #000;
+    transition-duration: .5ms ease;
+}
+
+.header a {
+    height: 44px;
+    width: 33px;
+    line-height: 44px;
+    text-align: center
+}

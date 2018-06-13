@@ -1,0 +1,55 @@
+.hot-container {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 17px 0;
+}
+
+.hot-detail {
+    margin: 0 15px
+}
+
+.hot-detail p {
+    margin: 8px 0 0;
+    height: 2.8em;
+    font: 12px/1.4em a;
+    color: rgb(0, 0, 0, 0.6);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hot-cover img {
+    width: 85px;
+    height: 113px;
+    border: 1px solid #f0f0f0;
+    border-radius: 1px;
+}
+
+.hot-cover {
+    position: relative
+}
+
+.hot-cover span {
+    position: absolute;
+    top: 90px;
+    color: #fff;
+    left: 5px
+}
+
+.hot-tag {
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.hot-tag span {
+    display: inline-block;
+    border: 1px solid #53ac7d;
+    font: 10px/11px a;
+    border-radius: 3px;
+    color: #53ac7d;
+    max-width: 6em;
+    text-overflow: ellipsis;
+    margin: -3px 7px 0 0;
+    padding: 3px 6px 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}

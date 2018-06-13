@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="/css/header.css"></link>
+<div class="flex flex-center header">
+    <a href="javascript:" style="background: url(/img/sign.png) no-repeat center; background-size: 25px;"></a>
+    <a href="javascript:" @click="tabSwitch(0)" :class="selectedItem===0?'selected':''">书城</a>
+    <a href="javascript:" @click="tabSwitch(1)" :class="selectedItem===1?'selected':''">书架</a>
+    <a href="/user" style="background:url(/img/user.png) no-repeat center;background-size: 20px"></a>
+</div>
